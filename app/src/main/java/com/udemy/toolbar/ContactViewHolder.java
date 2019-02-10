@@ -13,8 +13,8 @@ public class ContactViewHolder extends RecyclerView.ViewHolder {
      ImageView contactImage;
      TextView contactName;
      TextView contactNumber;
-     LinearLayout linearLayout;
      CardView cardView;
+     ImageView imageView;
 
     public ContactViewHolder(View itemView) {
         super(itemView);
@@ -22,6 +22,7 @@ public class ContactViewHolder extends RecyclerView.ViewHolder {
         contactName = (TextView) itemView.findViewById(R.id.contactname);
         contactNumber = (TextView) itemView.findViewById(R.id.contactnumber);
         cardView=(CardView) itemView.findViewById(R.id.card_view);
+        imageView=(ImageView) itemView.findViewById(R.id.call);
     }
 
 
