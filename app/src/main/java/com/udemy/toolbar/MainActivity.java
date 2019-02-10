@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -14,8 +16,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -44,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         String[] contactName = {"name1", "RAMA KRISHNA ASHRAM MARG", "RAMA KRISHNA ASHRAM MARG Hostel Warden RAMA KRISHNA ASHRAM MARG", "Boys Hostel Warden Sir", "Hostel Director ", "name6", "name7", "name8"};
         String[] contactNumber = {"9876543210", "9876543210", "9876543210", "9876543210", "9876543210", "9876543210", "9876543210", "9876543210"};
-         userList = new ArrayList<>();
+        userList = new ArrayList<>();
         for (int i = 0; i < contactName.length; i++) {
 
             User obj = new User();
@@ -57,11 +61,12 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.back);
         getSupportActionBar().setTitle(R.string.Contacts);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview_id);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerAdapter=new RecyclerAdapter(getBaseContext(), userList);
+        recyclerAdapter = new RecyclerAdapter(getBaseContext(), userList);
         recyclerView.setAdapter(recyclerAdapter);
 
         int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE);
@@ -79,25 +84,32 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.menu_main, menu);
-            MenuItem mSearch = menu.findItem(R.id.search_id);
+        MenuItem mSearch = menu.findItem(R.id.search_id);
 
-            SearchView mSearchView = (SearchView) mSearch.getActionView();
-            mSearchView.setQueryHint("Search Contacts");
-            mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-                @Override
-                public boolean onQueryTextSubmit(String query) {
-                    return false;
-                }
+        SearchView mSearchView = (SearchView) mSearch.getActionView();
 
-                @Override
-                public boolean onQueryTextChange(String newText) {
-                    recyclerAdapter.getFilter().filter(newText);
-                    return false;
-                }
-            });
+        mSearchView.setQueryHint(Html.fromHtml("<font color = #000000>" + getResources().getString(R.string.hintSearchMess) + "</font>"));
 
-            return super.onCreateOptionsMenu(menu);
-        }
+        EditText editText = (EditText) mSearchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
+        editText.setTextColor(Color.BLACK);
+        editText.bringToFront();
+        Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/sansation_bold.ttf");
+       editText.setTypeface(typeface);
+        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                recyclerAdapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+
+        return super.onCreateOptionsMenu(menu);
+    }
 
 
     @Override
@@ -130,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    class FetchContacts extends AsyncTask<Void,Void,Void>{
+    class FetchContacts extends AsyncTask<Void, Void, Void> {
 
 
         @Override
@@ -148,8 +160,6 @@ public class MainActivity extends AppCompatActivity {
             super.onPostExecute(aVoid);
         }
     }
-
-
 
 
 }

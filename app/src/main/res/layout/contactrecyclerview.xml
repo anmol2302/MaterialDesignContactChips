@@ -37,31 +37,25 @@
 
             <TextView
                 android:id="@+id/contactname"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="24dp"
-                android:fontFamily="@string/contact_screen_font"
-                android:textAlignment="gravity"
-                android:text="name"
-                android:scrollHorizontally="false"
-                android:textSize="18sp"
-                android:layout_weight="1"
                 android:autoSizeTextType="uniform"
-                android:inputType="textMultiLine"/>
-
+                android:text="name"
+                android:textSize="18sp"/>
 
 
             <TextView
                 android:id="@+id/contactnumber"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="8dp"
-                android:fontFamily="sans-serif"
-                android:text="contact"
-                android:textSize="14sp"
-                android:textStyle="normal" />
+                android:textStyle="bold"
+                android:text="contact No."
+                android:textSize="14sp"/>
 
 
         </LinearLayout>

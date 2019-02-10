@@ -11,7 +11,9 @@
     <android.support.v7.widget.Toolbar
         android:layout_height="?attr/actionBarSize"
         android:layout_width="match_parent"
+        app:titleTextColor="@color/colorItem"
         android:id="@+id/toolbar"
+        app:collapseIcon="@drawable/back"
         android:background="?attr/colorPrimary"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 

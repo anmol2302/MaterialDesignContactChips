@@ -3,11 +3,22 @@
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="popupTheme">@style/PopupTheme</item>
         <item name="android:windowBackground">@color/windowsbackgroundcolour</item>
-        <item name="android:navigationBarColor">@color/colorItem</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
     </style>
+
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/sansation_bold</item>
+        <item name="android:textViewStyle">@style/Base.CardView</item>
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+
+
 </resources>
