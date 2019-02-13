@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         editText.setTextColor(Color.BLACK);
         editText.bringToFront();
         Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/sansation_bold.ttf");
-       editText.setTypeface(typeface);
+        editText.setTypeface(typeface);
         mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {

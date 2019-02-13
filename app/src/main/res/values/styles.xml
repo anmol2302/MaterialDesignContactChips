@@ -3,11 +3,13 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/icons</item>
-        <item name="colorPrimaryDark">@color/divider</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="popupTheme">@style/PopupTheme</item>
+
         <item name="android:windowBackground">@color/windowsbackgroundcolour</item>
+
 
     </style>
 
