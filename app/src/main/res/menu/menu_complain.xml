@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item
+    android:id="@+id/navigation_shop"
+    android:icon="@drawable/sug"
+    android:tooltipText="Filters"
+    android:title="Filters" />
+
+<item
+    android:id="@+id/navigation_gifts"
+    android:icon="@drawable/user"
+    android:title="Sort By" />
+
+</menu>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:orientation="horizontal"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="80dp"-->
+<!--android:gravity="start"-->
+<!--android:layout_marginTop="8dp"-->
+<!--android:id="@+id/recyclerviewid"-->
+<!--android:clickable="true"-->
+<!--android:background="?attr/selectableItemBackground">-->
+
+    <!--<ImageView android:layout_width="45dp"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:id="@+id/contactimage"-->
+        <!--android:layout_margin="20dp"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:contentDescription="TODO" />-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="3">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/quality"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginTop="24dp"-->
+                    <!--android:autoSizeTextType="uniform"-->
+                    <!--android:defaultFocusHighlightEnabled="true"-->
+                    <!--android:focusableInTouchMode="true"-->
+                    <!--android:text="name"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:textAllCaps="true"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/suggestiondate"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:autoSizeTextType="uniform"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="date" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/suggestiontext"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="10dp"-->
+                <!--android:layout_marginLeft="100dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:text="Suggestion"-->
+                <!--android:maxLines="2"-->
+                <!--android:textStyle="normal"-->
+                <!--android:autoSizeTextType="uniform"-->
+                <!--android:textSize="14sp" />-->
+
+
+        <!--</LinearLayout>-->
+
+
+    <!--</RelativeLayout>-->
+
+
+<!--</android.support.v7.widget.CardView>-->
+<android.support.v7.widget.CardView
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="11dp"
+    android:layout_marginRight="11dp"
+    card_view:cardElevation="4dp"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="8dp"
+    card_view:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:clickable="true"
+    card_view:contentPadding="8dp"
+    android:background="?android:attr/selectableItemBackground"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/departmentField"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:textAllCaps="true"
+            android:id="@+id/department"
+            android:textStyle="bold|italic"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="management"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/subjectdatefield"
+        android:layout_below="@+id/departmentField"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageView android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="25dp"
+            android:id="@+id/subjectImage"
+            android:layout_gravity="left"
+            android:src="@drawable/subject"
+            android:scaleType="fitXY"
+            android:contentDescription="TODO" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:textSize="18sp"
+            android:id="@+id/subject"
+            android:layout_height="wrap_content"
+            android:text="Employ Minor"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/complaindate"
+            android:layout_width="0dp"
+            android:layout_gravity="right"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:layout_weight="1"
+            android:text="date" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/complainfield"
+        android:padding="10dp"
+        android:weightSum="2"
+        android:layout_below="@+id/subjectdatefield">
+
+        <ImageView android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:id="@+id/complainId"
+            android:scaleType="centerCrop"
+            android:contentDescription="TODO" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layoutDirection="locale"
+            android:id="@+id/complain"
+            android:layout_gravity="fill_horizontal"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:autoSizeTextType="uniform"
+            android:text="this is a demo complain "/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/statusField"
+        android:layout_below="@+id/complainfield">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: "
+            android:layout_marginTop="10dp"
+            android:id="@+id/statusLabel"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/statusLabel"
+            android:id="@+id/statusImage"
+            android:scaleType="centerCrop"
+            android:contentDescription="TODO" />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+    <!--<ImageView android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:id="@+id/contactimage"-->
+        <!--android:layout_margin="24dp"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:background="@drawable/circle"-->
+        <!--android:contentDescription="TODO" />-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/contactname"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="100dp"-->
+                <!--android:layout_marginTop="24dp"-->
+                <!--android:fontFamily="sans-serif"-->
+                <!--android:text="name"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold" />-->
+
+
+            <!--<TextView-->
+                <!--android:id="@+id/contactnumber"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="100dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:fontFamily="sans-serif"-->
+                <!--android:text="contact"-->
+                <!--android:textSize="14sp"-->
+                <!--android:textStyle="normal" />-->
+
+
+        <!--</LinearLayout>-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/call"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/call" />-->
+
+
+    <!--</RelativeLayout>-->
+
+
+</android.support.v7.widget.CardView>
